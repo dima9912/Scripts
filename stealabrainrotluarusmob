@@ -1,5 +1,6 @@
-
+ofdodldl = nil
 local id = game.Players.LocalPlayer.UserId
+local namelocalplayera = game.Players.LocalPlayer.Name
 
 for _, plot in pairs(workspace.Plots:GetChildren()) do
     if plot:IsA("Model") then
@@ -156,3 +157,4 @@ task.wait(0.1)
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+
