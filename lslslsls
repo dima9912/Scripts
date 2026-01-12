@@ -1,0 +1,239 @@
+for _, plot in pairs(workspace.Plots:GetChildren()) do
+    if plot:IsA("Model") then
+        local at = plot:GetAttribute("Owner")
+        if at == game.Players.LocalPlayer.UserId then
+--Use plot.sdsdsdsd
+
+--Functions
+local function protectnamebase() 
+    plot.PlotSign.SurfaceGui.Frame.TextLabel.Text = "А хуй там плавал"
+end
+
+local function protectnameintab()
+game:GetService("CoreGui").PlayerList.Children.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScrollingFrame.OffsetUndoFrame.TeamList_Neutral:FindFirstChild("PlayerEntry_" .. game.Players.LocalPlayer.UserId).PlayerEntryContentFrame.OverlayFrame.NameFrame.PlayerName.PlayerName.Text = "А хуй там плавал"
+end
+
+--Locales
+local LSSOS = game:GetService("TweenService")
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local args = {
+    plot.Name
+}
+--Gui
+local Folder = Instance.new("Folder")
+Folder.Parent = CoreGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = Folder
+
+--frame gui
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 0)
+frame.Position = UDim2.new(0, 1380, 0, 0)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+frame.Draggable = true
+frame.Active = true
+frame.Selectable = true
+frame.Parent = ScreenGui
+
+local soundddd = Instance.new("Sound")
+soundddd.Parent = frame
+soundddd.SoundId = "rbxassetid://90864973986637"
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 30)
+UICorner.Parent = frame
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Parent = frame
+UIStroke.Thickness = 2
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Position = UDim2.new(0, 0, 0, -155) 
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "Меню УРБ💩🥀"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 23
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Parent = frame
+
+local button1 = Instance.new("TextButton")
+button1.Parent = frame
+button1.Size = UDim2.new(0, 130, 0, 50)
+button1.Position = UDim2.new(0, 38, 0, 30)
+button1.Text = "Тп на базу"
+button1.Font = Enum.Font.Gotham
+button1.TextSize = 15
+button1.TextTransparency = 0
+button1.BackgroundTransparency = 1
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = button1
+
+
+local button2 = Instance.new("TextButton")
+button2.Parent = frame
+button2.Size = UDim2.new(0, 130, 0, 50)
+button2.Position = UDim2.new(0, 38, 0, 110)
+button2.Text = "Авто-спиздилка"
+button2.Font = Enum.Font.Gotham
+button2.TextSize = 15
+button2.TextTransparency = 0
+button2.BackgroundTransparency = 1
+
+local UICorner4 = Instance.new("UICorner")
+UICorner4.Parent = button2
+
+
+local button3 = Instance.new("TextButton")
+button3.Parent = frame
+button3.Size = UDim2.new(0, 130, 0, 50)
+button3.Position = UDim2.new(0, 38, 0, 190)
+button3.Text = "Быстрая активация"
+button3.Font = Enum.Font.Gotham
+button3.TextSize = 14
+button3.TextTransparency = 0
+button3.BackgroundTransparency = 1
+
+local UICorner3 = Instance.new("UICorner")
+UICorner3.Parent = button3
+
+local button4 = Instance.new("TextButton")
+button4.Parent = frame
+button4.Size = UDim2.new(0, 130, 0, 50)
+button4.Position = UDim2.new(0, 38, 0, 270)
+button4.Text = "Защита ника"
+button4.Font = Enum.Font.Gotham
+button4.TextSize = 14
+button4.TextTransparency = 0
+button4.BackgroundTransparency = 1
+
+local UICorner4 = Instance.new("UICorner")
+UICorner4.Parent = button4
+
+button3.MouseButton1Click:Connect(function()
+    task.spawn(function()
+        local success, err = pcall(function()
+            local workspace = game:GetService("Workspace")
+            
+            local function makeInstant(prompt)
+                if not prompt or not prompt:IsA("ProximityPrompt") then return end
+                
+                pcall(function() prompt.HoldDuration = 0 end)
+                pcall(function() prompt.RequiresLineOfSight = false end)
+                
+                pcall(function()
+                    prompt:GetPropertyChangedSignal("HoldDuration"):Connect(function()
+                        task.spawn(function()
+                            task.wait(0.01)
+                            pcall(function() prompt.HoldDuration = 0 end)
+                        end)
+                    end)
+                end)
+            end
+
+            for _, obj in workspace:GetDescendants() do
+                if obj:IsA("ProximityPrompt") then
+                    task.spawn(makeInstant, obj)
+                end
+            end
+
+            workspace.DescendantAdded:Connect(function(obj)
+                if obj:IsA("ProximityPrompt") then
+                    task.wait()
+                    task.spawn(makeInstant, obj)
+                end
+            end)
+        end)
+    end)
+end)
+
+button1.MouseButton1Click:Connect(function()
+Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plot.AnimalTarget.CFrame
+end)
+
+button2.MouseButton1Click:Connect(function()
+    if autosteal == false then
+	wait(0)
+								StarterGui:SetCore("SendNotification", {
+                        Title = "Авто-спиздилка",
+                        Text = "Включена",
+                        Duration = 2,
+                    })
+        getgenv().autosteal = true
+        while autosteal do
+            if Players.LocalPlayer:GetAttribute("Stealing") == true then
+                for i = 1, 20 do
+                    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RE/dfdd4236-1fac-4b9a-9f67-fec68d72c151"):FireServer(unpack(args))
+                end
+            end
+            task.wait(0.1)
+        end
+    else
+	wait()
+        getgenv().autosteal = false
+									StarterGui:SetCore("SendNotification", {
+                        Title = "Авто-спиздилка",
+                        Text = "Отключена",
+                        Duration = 2,
+                    })
+    end
+end)
+
+button4.MouseButton1Click:Connect(function()
+plot.PlotSign.SurfaceGui.Frame.TextLabel:GetPropertyChangedSignal("Text"):Connect(protectnamebase)
+game:GetService("CoreGui").PlayerList.Children.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScrollingFrame.OffsetUndoFrame.TeamList_Neutral:FindFirstChild("PlayerEntry_" .. game.Players.LocalPlayer.UserId).PlayerEntryContentFrame.OverlayFrame.NameFrame.PlayerName.PlayerName:GetPropertyChangedSignal("Text"):Connect(protectnameintab)
+protectnamebase()
+protectnameintab()	
+end)
+
+--Anims
+local frameinf = TweenInfo.new(1.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out)
+local frameinf2 = {Size = UDim2.new(0, 200, 0, 340)}
+local frameanim = LSSOS:Create(frame, frameinf, frameinf2)
+local buttonaimka = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local button1Anim = LSSOS:Create(button1, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
+local button2Anim = LSSOS:Create(button2, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
+local button3Anim = LSSOS:Create(button3, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
+local button4Anim =  LSSOS:Create(button4, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
+local textguianim = LSSOS:Create(TextLabel, buttonaimka, {TextTransparency = 0})
+
+frameanim:Play()
+task.wait(1.5)
+
+task.wait(0.2)
+textguianim:Play()
+task.wait(0.1)
+button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+button1Anim:Play()
+task.wait(0.1)
+button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+button2Anim:Play()
+task.wait(0.1)
+button3.TextColor3 = Color3.fromRGB(0, 0, 0)
+button3Anim:Play()
+task.wait(0.1)
+button4.TextColor3 = Color3.fromRGB(0, 0, 0)
+button4Anim:Play()
+
+task.wait(0.2)
+soundddd:Play()
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Меню УРБ",
+    Text = "Гуи загружено",
+    Duration = 5,
+})
+
+--доп хуйня
+game.Players.LocalPlayer.DevEnableMouseLock = true
+--Бля что такое эта
+end
+end
+end
+
+getgenv().autosteal = true
+getgenv().autosteal = false
