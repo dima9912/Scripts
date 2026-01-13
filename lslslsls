@@ -37,6 +37,24 @@ frame.Active = true
 frame.Selectable = true
 frame.Parent = ScreenGui
 
+local destroybutton = Instance.new("TextButton")
+destroybutton.Size = UDim2.new(0, 37, 0, 37)
+destroybutton.Position = UDim2.new(0, 165, 0, -5)
+destroybutton.Rotation = -5
+destroybutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+destroybutton.BackgroundTransparency = 1
+destroybutton.Text = "X"
+destroybutton.TextSize = 14
+destroybutton.TextScaled = true
+destroybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+destroybutton.Font = Enum.Font.SourceSans
+destroybutton.TextTransparency = 1
+destroybutton.Parent = frame
+
+local Uicornermathhyge = Instance.new("UICorner")
+Uicornermathhyge.Parent = destroybutton
+Uicornermathhyge.CornerRadius = UDim.new(0,8)
+
 local soundddd = Instance.new("Sound")
 soundddd.Parent = frame
 soundddd.SoundId = "rbxassetid://90864973986637"
@@ -52,9 +70,9 @@ UIStroke.Color = Color3.fromRGB(255, 255, 255)
 
 local TextLabel = Instance.new("TextLabel")
 TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Position = UDim2.new(0, 0, 0, -155) 
+TextLabel.Position = UDim2.new(0, -18, 0, -155) 
 TextLabel.BackgroundTransparency = 1
-TextLabel.Text = "Меню УРБ💩🥀"
+TextLabel.Text = ""
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 23
 TextLabel.Font = Enum.Font.Gotham
@@ -64,10 +82,10 @@ local button1 = Instance.new("TextButton")
 button1.Parent = frame
 button1.Size = UDim2.new(0, 130, 0, 50)
 button1.Position = UDim2.new(0, 38, 0, 30)
-button1.Text = "Тп на базу"
+button1.Text = ""
 button1.Font = Enum.Font.Gotham
 button1.TextSize = 15
-button1.TextTransparency = 0
+button1.TextTransparency = 1
 button1.BackgroundTransparency = 1
 
 local UICorner2 = Instance.new("UICorner")
@@ -78,10 +96,10 @@ local button2 = Instance.new("TextButton")
 button2.Parent = frame
 button2.Size = UDim2.new(0, 130, 0, 50)
 button2.Position = UDim2.new(0, 38, 0, 110)
-button2.Text = "Авто-спиздилка"
+button2.Text = ""
 button2.Font = Enum.Font.Gotham
 button2.TextSize = 15
-button2.TextTransparency = 0
+button2.TextTransparency = 1
 button2.BackgroundTransparency = 1
 
 local UICorner4 = Instance.new("UICorner")
@@ -92,10 +110,10 @@ local button3 = Instance.new("TextButton")
 button3.Parent = frame
 button3.Size = UDim2.new(0, 130, 0, 50)
 button3.Position = UDim2.new(0, 38, 0, 190)
-button3.Text = "Быстрая активация"
+button3.Text = ""
 button3.Font = Enum.Font.Gotham
 button3.TextSize = 14
-button3.TextTransparency = 0
+button3.TextTransparency = 1
 button3.BackgroundTransparency = 1
 
 local UICorner3 = Instance.new("UICorner")
@@ -105,10 +123,10 @@ local button4 = Instance.new("TextButton")
 button4.Parent = frame
 button4.Size = UDim2.new(0, 130, 0, 50)
 button4.Position = UDim2.new(0, 38, 0, 270)
-button4.Text = "Защита ника"
+button4.Text = ""
 button4.Font = Enum.Font.Gotham
 button4.TextSize = 14
-button4.TextTransparency = 0
+button4.TextTransparency = 1
 button4.BackgroundTransparency = 1
 
 local UICorner4 = Instance.new("UICorner")
@@ -155,6 +173,10 @@ button1.MouseButton1Click:Connect(function()
 Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plot.AnimalTarget.CFrame
 end)
 
+destroybutton.MouseButton1Click:Connect(function()
+Folder:Destroy()
+end)
+
 button2.MouseButton1Click:Connect(function()
     if autosteal == false then
 	wait(0)
@@ -190,6 +212,43 @@ protectnamebase()
 protectnameintab()	
 end)
 
+--function
+local text = "Меню УРБ💩🥀"
+local function typewriterEffect(textToPrint)
+    for i = 1, #textToPrint do
+        TextLabel.Text = string.sub(textToPrint, 1, i)
+        task.wait(0.03)
+    end
+end
+
+local function typewriterEffect1(textToPrint)
+    for i = 1, #textToPrint do
+        button1.Text = string.sub(textToPrint, 1, i)
+        task.wait(0.03)
+    end
+end
+
+local function typewriterEffect2(textToPrint)
+    for i = 1, #textToPrint do
+        button2.Text = string.sub(textToPrint, 1, i)
+        task.wait(0.03)
+    end
+end
+
+local function typewriterEffect3(textToPrint)
+    for i = 1, #textToPrint do
+        button3.Text = string.sub(textToPrint, 1, i)
+        task.wait(0.03)
+    end
+end
+
+local function typewriterEffect4(textToPrint)
+    for i = 1, #textToPrint do
+        button4.Text = string.sub(textToPrint, 1, i)
+        task.wait(0.03)
+    end
+end
+
 --Anims
 local frameinf = TweenInfo.new(1.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out)
 local frameinf2 = {Size = UDim2.new(0, 200, 0, 340)}
@@ -198,14 +257,16 @@ local buttonaimka = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirecti
 local button1Anim = LSSOS:Create(button1, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local button2Anim = LSSOS:Create(button2, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local button3Anim = LSSOS:Create(button3, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
-local button4Anim =  LSSOS:Create(button4, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
-local textguianim = LSSOS:Create(TextLabel, buttonaimka, {TextTransparency = 0})
-
+local button4Anim = LSSOS:Create(button4, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
+local textguiAnim = LSSOS:Create(TextLabel, buttonaimka, {TextTransparency = 0})
+local destroyAnim = LSSOS:Create(destroybutton, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 frameanim:Play()
 task.wait(1.5)
 
 task.wait(0.2)
-textguianim:Play()
+textguiAnim:Play()
+destroyAnim:Play()
+typewriterEffect(text)
 task.wait(0.1)
 button1.TextColor3 = Color3.fromRGB(0, 0, 0)
 button1Anim:Play()
@@ -219,6 +280,18 @@ task.wait(0.1)
 button4.TextColor3 = Color3.fromRGB(0, 0, 0)
 button4Anim:Play()
 
+local text = "Тп на базу"
+typewriterEffect1(text)
+
+local text = "Авто-спиздилка"
+typewriterEffect2(text)
+
+local text = "Быстрая активация"
+typewriterEffect3(text)
+
+local text = "Защита ника"
+typewriterEffect4(text)
+
 task.wait(0.2)
 soundddd:Play()
 
@@ -230,6 +303,7 @@ StarterGui:SetCore("SendNotification", {
 
 --доп хуйня
 game.Players.LocalPlayer.DevEnableMouseLock = true
+workspace:WaitForChild("TSP"):Destroy()
 --Бля что такое эта
 end
 end
@@ -237,3 +311,4 @@ end
 
 getgenv().autosteal = true
 getgenv().autosteal = false
+--я заебался
