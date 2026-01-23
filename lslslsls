@@ -39,10 +39,6 @@ local StarterGui = game:GetService("StarterGui")
 local args = {
     plot.Name
 }
-local animation = Instance.new("Animation")
-animation.AnimationId = animid
-anim = Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(animation)
-anim.Priority = Enum.AnimationPriority.Movement
 --Gui
 local Folder = Instance.new("Folder")
 Folder.Parent = CoreGui
@@ -96,7 +92,7 @@ UIStroke.Color = Color3.fromRGB(255, 255, 255)
 
 local TextLabel = Instance.new("TextLabel")
 TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Position = UDim2.new(0, -18, 0, -195) 
+TextLabel.Position = UDim2.new(0, -18, 0, -155) 
 TextLabel.BackgroundTransparency = 1
 TextLabel.Text = ""
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -157,19 +153,6 @@ button4.BackgroundTransparency = 1
 
 local UICorner4 = Instance.new("UICorner")
 UICorner4.Parent = button4
-
-local button5 = Instance.new("TextButton")
-button5.Parent = frame
-button5.Size = UDim2.new(0, 130, 0, 50)
-button5.Position = UDim2.new(0, 38, 0, 350)
-button5.Text = "Танец эпштейна"
-button5.Font = Enum.Font.Gotham
-button5.TextSize = 14
-button5.TextTransparency = 1
-button5.BackgroundTransparency = 1
-
-local UICorner5 = Instance.new("UICorner")
-UICorner5.Parent = button5
 
 button3.MouseButton1Click:Connect(function()
     task.spawn(function()
@@ -257,26 +240,6 @@ task.wait(8)
 sound2.Playing = false
 end)
 
-button5.MouseButton1Click:Connect(function()
-    if emoteanimgetgenv == false then
-        getgenv().emoteanimgetgenv = true
-        StarterGui:SetCore("SendNotification", {
-            Title = "Танец эпштейна",
-            Text = "Включено",
-            Duration = 4,
-        })
-        anim:Play()
-    else
-        getgenv().emoteanimgetgenv = false
-		anim:Stop()     
-        StarterGui:SetCore("SendNotification", {
-            Title = "Танец эпштейна",
-            Text = "Отключено",
-            Duration = 4,
-        })
-    end
-end)
-
 --function
 local text = "Меню УРБ💩🥀"
 local function typewriterEffect(textToPrint)
@@ -288,14 +251,13 @@ end
 
 --Anims
 local frameinf = TweenInfo.new(1.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out)
-local frameinf2 = {Size = UDim2.new(0, 200, 0, 420)}
+local frameinf2 = {Size = UDim2.new(0, 200, 0, 340)}
 local frameanim = LSSOS:Create(frame, frameinf, frameinf2)
 local buttonaimka = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local button1Anim = LSSOS:Create(button1, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local button2Anim = LSSOS:Create(button2, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local button3Anim = LSSOS:Create(button3, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local button4Anim = LSSOS:Create(button4, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
-local button5Anim = LSSOS:Create(button5, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 local textguiAnim = LSSOS:Create(TextLabel, buttonaimka, {TextTransparency = 0})
 local destroyAnim = LSSOS:Create(destroybutton, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
 frameanim:Play()
@@ -319,11 +281,6 @@ button3Anim:Play()
 task.wait(0.1)
 button4.TextColor3 = Color3.fromRGB(0, 0, 0)
 button4Anim:Play()
-task.wait(0.1)
-button5.TextColor3 = Color3.fromRGB(0, 0, 0)
-button5Anim:Play()
-getgenv().emoteanimgetgenv = true
-getgenv().emoteanimgetgenv = false
 task.wait(0.2)
 sound1:Play()
 
