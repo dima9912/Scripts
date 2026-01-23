@@ -6,18 +6,6 @@ for _, plot in pairs(workspace.Plots:GetChildren()) do
 
 --Functions
 
-local function anim2track(asset_id)
-    local objs = game:GetObjects(asset_id)
-    for i = 1, #objs do
-        if objs[i]:IsA("Animation") then
-            return objs[i].AnimationId
-        end
-    end
-    return asset_id
-end
-
-animid = anim2track(89114994401113)
-
 local function generatorrandomsymbols()
     local length = math.random(20,20)
     local array = {}
