@@ -34,14 +34,22 @@ local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = Folder
 
 --frame gui
+--Мобил версия
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 200, 0, 0)
-frame.Position = UDim2.new(0, 1380, 0, 0)
+frame.Size = UDim2.new(0, 200, 0, 340)
+frame.Position = UDim2.new(0, 541, 0, 6)
 frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 frame.Draggable = true
 frame.Active = true
 frame.Selectable = true
 frame.Parent = ScreenGui
+
+local scrollingframe = Instance.new("ScrollingFrame")
+scrollingframe.BackgroundTransparency = 1
+scrollingframe.Size = UDim2.new(0, 193, 0, 200)
+scrollingframe.Position = UDim2.new(0, 0, 0.094, 0)
+scrollingframe.CanvasSize = UDim2.new(0, 0, 1.2, 0)
+scrollingframe.Parent = frame
 
 local destroybutton = Instance.new("TextButton")
 destroybutton.Size = UDim2.new(0, 37, 0, 37)
@@ -80,7 +88,7 @@ UIStroke.Color = Color3.fromRGB(255, 255, 255)
 
 local TextLabel = Instance.new("TextLabel")
 TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Position = UDim2.new(0, -18, 0, -155) 
+TextLabel.Position = UDim2.new(0, -18, 0, -125) 
 TextLabel.BackgroundTransparency = 1
 TextLabel.Text = ""
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -89,9 +97,9 @@ TextLabel.Font = Enum.Font.Gotham
 TextLabel.Parent = frame
 
 local button1 = Instance.new("TextButton")
-button1.Parent = frame
-button1.Size = UDim2.new(0, 130, 0, 50)
-button1.Position = UDim2.new(0, 38, 0, 30)
+button1.Parent = scrollingframe
+button1.Size = UDim2.new(0, 148, 0, 50)
+button1.Position = UDim2.new(0, 20, 0, 15)
 button1.Text = "Тп на базу"
 button1.Font = Enum.Font.Gotham
 button1.TextSize = 15
@@ -103,9 +111,9 @@ UICorner2.Parent = button1
 
 
 local button2 = Instance.new("TextButton")
-button2.Parent = frame
-button2.Size = UDim2.new(0, 130, 0, 50)
-button2.Position = UDim2.new(0, 38, 0, 110)
+button2.Parent = scrollingframe
+button2.Size = UDim2.new(0, 148, 0, 50)
+button2.Position = UDim2.new(0, 20, 0, 95)
 button2.Text = "Авто-спиздилка"
 button2.Font = Enum.Font.Gotham
 button2.TextSize = 15
@@ -117,9 +125,9 @@ UICorner4.Parent = button2
 
 
 local button3 = Instance.new("TextButton")
-button3.Parent = frame
-button3.Size = UDim2.new(0, 130, 0, 50)
-button3.Position = UDim2.new(0, 38, 0, 190)
+button3.Parent = scrollingframe
+button3.Size = UDim2.new(0, 148, 0, 50)
+button3.Position = UDim2.new(0, 20, 0, 175)
 button3.Text = "Быстрая активация"
 button3.Font = Enum.Font.Gotham
 button3.TextSize = 14
@@ -130,9 +138,9 @@ local UICorner3 = Instance.new("UICorner")
 UICorner3.Parent = button3
 
 local button4 = Instance.new("TextButton")
-button4.Parent = frame
-button4.Size = UDim2.new(0, 130, 0, 50)
-button4.Position = UDim2.new(0, 38, 0, 270)
+button4.Parent = scrollingframe
+button4.Size = UDim2.new(0, 148, 0, 50)
+button4.Position = UDim2.new(0, 20, 0, 255)
 button4.Text = "Защита ника"
 button4.Font = Enum.Font.Gotham
 button4.TextSize = 14
