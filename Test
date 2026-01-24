@@ -36,7 +36,7 @@ ScreenGui.Parent = Folder
 --frame gui
 --Мобил версия
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 200, 0, 340)
+frame.Size = UDim2.new(0, 200, 0, 0)
 frame.Position = UDim2.new(0, 541, 0, 6)
 frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 frame.Draggable = true
@@ -247,7 +247,7 @@ end
 
 --Anims
 local frameinf = TweenInfo.new(1.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out)
-local frameinf2 = {Size = UDim2.new(0, 200, 0, 340)}
+local frameinf2 = {Size = UDim2.new(0, 200, 0, 270)}
 local frameanim = LSSOS:Create(frame, frameinf, frameinf2)
 local buttonaimka = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local button1Anim = LSSOS:Create(button1, buttonaimka, {BackgroundTransparency = 0, TextTransparency = 0})
@@ -260,7 +260,6 @@ frameanim:Play()
 task.wait(1.5)
 
 task.wait(0.2)
-textguiAnim:Play()
 destroyAnim:Play()
 typewriterEffect(text)
 task.wait(0.1)
