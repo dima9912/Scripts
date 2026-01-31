@@ -1,13 +1,13 @@
 local animations = {
-    idle = "rbxassetid://133806214992291",    -- Primary idle animation
-    idleAlt = "rbxassetid://94970088341563", -- Alternate idle animation
-    walk = "rbxassetid://109168724482748",    -- Walk animation
-    run = "rbxassetid://81024476153754",     -- Run animation
-    jump = "rbxassetid://116936326516985",    -- Jump animation
-    fall = "rbxassetid://92294537340807",    -- Fall animation
-    swim = "rbxassetid://134591743181628",    -- Swim animation
-    swimIdle = "rbxassetid://98854111361360",-- Swim idle animation
-    climb = "rbxassetid://119377220967554"    -- Climb animation
+    idle = "rbxassetid://122257458498464",    -- Primary idle animation
+    idleAlt = "rbxassetid://102357151005774", -- Alternate idle animation
+    walk = "rbxassetid://122150855457006",    -- Walk animation
+    run = "rbxassetid://82598234841035",     -- Run animation
+    jump = "rbxassetid://656117878",    -- Jump animation
+    fall = "rbxassetid://98600215928904",    -- Fall animation
+    swim = "rbxassetid://133308483266208",    -- Swim animation
+    swimIdle = "rbxassetid://109346520324160",-- Swim idle animation 
+    climb = "rbxassetid://88763136693023"    -- Climb animation
 }
 
 -- Function to replace the default animations
