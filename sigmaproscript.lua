@@ -84,10 +84,11 @@ queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dima99
 end)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/krissisis898-dev/Roblox-/refs/heads/main/Roblox%20Anti%20AFK-Script%20(updatet)", true))()
-
+--[[
 wait(90)
 if TextLabel2.Text == "Брейнрот: " then
-		game.Players.LocalPlayer:Kick("github")
+		game.Players.LocalPlayer:Kick("lol")
 		wait()
 		TeleportService:Teleport(PlaceId, game.Players.LocalPlayer)
 end
+]]
