@@ -65,7 +65,7 @@ sound.Parent = workspace
 
 
 workspace:WaitForChild("RenderedMovingAnimals").ChildAdded:Connect(function(child)
-    if child.Name == "Векосини Разработчиконини" or child.Name == "Лос Векосикос" or child.Name == "Братья Перцы" or child.Name == "Пи и Дверь" or child.Name == "Векосик Жиросик" or child.Name == "Ждун" or child.Name == "Кот Куки" then
+    if child.Name == "Векосини Разработчиконини" or child.Name == "Лос Векосикос" or child.Name == "Братья Перцы" or child.Name == "Пи и Дверь" or child.Name == "Векосик Жиросик" or child.Name == "Ждун" or child.Name == "Кот Куки" or child.Name == "Мегалодониха Дондониха" then
 	    local timeTable = os.date("*t", os.time())
         local hours = string.format("%02d", timeTable.hour)
         local minutes = string.format("%02d", timeTable.min)
