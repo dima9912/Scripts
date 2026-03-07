@@ -87,7 +87,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/krissisis898-dev/Robl
 
 wait(5)
 if TextLabel2.Text == "Брейнрот: " then
-		game.Players.LocalPlayer:Kick("пш пш по приколу")
+		game.Players.LocalPlayer:Kick("lol")
 		wait()
 		TeleportService:Teleport(PlaceId, game.Players.LocalPlayer)
 end
