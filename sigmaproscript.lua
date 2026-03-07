@@ -85,7 +85,7 @@ end)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/krissisis898-dev/Roblox-/refs/heads/main/Roblox%20Anti%20AFK-Script%20(updatet)", true))()
 
-wait(300)
+wait(150)
 if TextLabel2.Text == "Брейнрот: " then
 		game.Players.LocalPlayer:Kick("lol")
 		wait()
