@@ -65,7 +65,7 @@ sound.Parent = workspace
 
 
 workspace:WaitForChild("RenderedMovingAnimals").ChildAdded:Connect(function(child)
-    if child.Name == "Векосини Разработчиконини" or child.Name == "Лос Векосикос" or child.Name == "Братья Перцы" or child.Name == "Пи и Дверь" or child.Name == "Векосик Жиросик" or child.Name == "Ждун" or child.Name == "Кот Куки" or child.Name == "Мегалодониха Дондониха" then
+    if child.Name == "Дон Дон Мегалодон" or child.Name == "Пи и Дверь" or child.Name == "Братья Перцы" or child.Name == "Нокиа 3310" or child.Name == "Векосик Жиросик" or child.Name == "Ждун" or child.Name == "Кот Куки" or child.Name == "Мегалодониха Дондониха" then
 	    local timeTable = os.date("*t", os.time())
         local hours = string.format("%02d", timeTable.hour)
         local minutes = string.format("%02d", timeTable.min)
@@ -76,19 +76,18 @@ workspace:WaitForChild("RenderedMovingAnimals").ChildAdded:Connect(function(chil
 	end
 end)
 
---Use (result) for output
-workspace:WaitForChild("Camera").CFrame = CFrame.new(-342.756744, -2.52128744, 227.821014, 0.559449196, -0.214525968, 0.800621808, 0, 0.965925872, 0.258819044, -0.828864694, -0.144796103, 0.540386438)
-
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
 queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/Scripts/refs/heads/main/sigmaproscript.lua'))()")
 end)
 
+--Use (result) for output
+workspace:WaitForChild("Camera").CFrame = CFrame.new(-342.756744, -2.52128744, 227.821014, 0.559449196, -0.214525968, 0.800621808, 0, 0.965925872, 0.258819044, -0.828864694, -0.144796103, 0.540386438)
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/krissisis898-dev/Roblox-/refs/heads/main/Roblox%20Anti%20AFK-Script%20(updatet)", true))()
---[[
-wait(90)
+
+wait(6.5)
 if TextLabel2.Text == "Брейнрот: " then
 		game.Players.LocalPlayer:Kick("lol")
 		wait()
 		TeleportService:Teleport(PlaceId, game.Players.LocalPlayer)
 end
-]]
