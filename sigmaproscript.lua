@@ -65,7 +65,7 @@ sound.Parent = workspace
 
 
 workspace:WaitForChild("RenderedMovingAnimals").ChildAdded:Connect(function(child)
-    if child.Name == "Пи и Дверь" or child.Name == "Братья Перцы" or child.Name == "Векосик Жиросик" or child.Name == "Ждун" or child.Name == "Кот Куки" or child.Name == "Мегалодониха Дондониха" then
+    if child.Name == "Ждун" or child.Name == "Кот Куки" then
 	    local timeTable = os.date("*t", os.time())
         local hours = string.format("%02d", timeTable.hour)
         local minutes = string.format("%02d", timeTable.min)
@@ -76,9 +76,7 @@ workspace:WaitForChild("RenderedMovingAnimals").ChildAdded:Connect(function(chil
         
         for _, obj in pairs(workspace.MovingAnimals:GetChildren()) do
             if string.find(obj.Name, "RoadAnimal_" .. child.Name .. "_") == 1 then
-                workspace.Camera.CameraType = Enum.CameraType.Scriptable
                 workspace.Camera.Focus = CFrame.new(-410.568817, -5.40000486, 169.862747, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-                workspace.Camera.CameraType = Enum.CameraType.Custom
                 workspace.Camera.CFrame = CFrame.new(-412.73941, 6.91009188, 169.852142, -0.00488738995, 0.984795988, -0.173646525, 0, 0.173648596, 0.98480773, 0.999988079, 0.00481313933, -0.00084868836)
                 obj.HumanoidRootPart.PromptAttachment.ProximityPrompt.HoldDuration = 0
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = obj.HumanoidRootPart.CFrame
