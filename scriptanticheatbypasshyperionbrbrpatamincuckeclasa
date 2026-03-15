@@ -1,5 +1,5 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/liebertsx/Tora-Library/main/src/library",true))()
-local tab = library:CreateWindow("УРМ|SCRIPT")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/liebertsx/Tora-Library/main/src/librarynew",true))()
+local tab = library:CreateWindow("УРМ|СКРИПТ")
 
 local function NilHoldDurationProximityPrompt()
 task.spawn(function()
