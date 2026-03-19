@@ -153,6 +153,14 @@ tab:AddButton({
 end
 })
 
+tab:AddButton({
+    text = "Infinite Yield",
+    flag = "button",
+    callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end
+})
+
 if game.Players.LocalPlayer.Name == "bebpabot" then
 local tab2 = library:CreateWindow("ЫЭ дебаг меню")
 tab2:AddButton({
